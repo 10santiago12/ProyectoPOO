@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="319.0" prefWidth="504.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ProductosController">
+   <children>
+      <Pane layoutX="6.0" layoutY="7.0" prefHeight="306.0" prefWidth="493.0" style="-fx-border-color: #000000; -fx-background-color: #F4D03F;">
+         <children>
+            <Button fx:id="btn_vertodos" layoutX="395.0" layoutY="17.0" mnemonicParsing="false" onAction="#doVertodos" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #104D91; -fx-border-color: #000000;" text="Ver todos" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="60.0" prefHeight="31.0" prefWidth="113.0" style="-fx-border-color: #000000;" text="Productos:">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbx_productos" layoutX="129.0" layoutY="59.0" onAction="#doFiltroProducto" prefHeight="31.0" prefWidth="354.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+            <Pane layoutX="11.0" layoutY="107.0" prefHeight="185.0" prefWidth="354.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="57.0" prefHeight="31.0" prefWidth="121.0" style="-fx-border-color: #000000;" text="Número de producto:">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_numProd" disable="true" editable="false" layoutX="135.0" layoutY="57.0" prefHeight="31.0" prefWidth="202.0">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lbl_saldo" alignment="CENTER" layoutX="10.0" layoutY="97.0" prefHeight="31.0" prefWidth="121.0" style="-fx-border-color: #000000;">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_saldo" disable="true" layoutX="135.0" layoutY="97.0" onKeyTyped="#validaSaldo" prefHeight="31.0" prefWidth="202.0">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lbl_meses" alignment="CENTER" layoutX="10.0" layoutY="137.0" prefHeight="31.0" prefWidth="121.0" style="-fx-border-color: #000000;">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_meses" disable="true" layoutX="135.0" layoutY="137.0" onKeyTyped="#validaMeses" prefHeight="31.0" prefWidth="202.0">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="17.0" prefHeight="31.0" prefWidth="121.0" style="-fx-border-color: #000000;" text="Fecha de apertura:">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="fec_apertura" disable="true" layoutX="135.0" layoutY="17.0" onAction="#doApertura" prefHeight="31.0" prefWidth="202.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </DatePicker>
+               </children>
+            </Pane>
+            <Button fx:id="btn_crear" disable="true" layoutX="370.0" layoutY="120.0" mnemonicParsing="false" onAction="#doCrear" prefHeight="31.0" prefWidth="113.0" style="-fx-background-color: #48A33A; -fx-border-color: #000000;" text="Crear" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_modificar" disable="true" layoutX="370.0" layoutY="162.0" mnemonicParsing="false" onAction="#doModificar" prefHeight="31.0" prefWidth="113.0" style="-fx-background-color: #EE9F15; -fx-border-color: #000000;" text="Modificar" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_eliminar" disable="true" layoutX="370.0" layoutY="204.0" mnemonicParsing="false" onAction="#doEliminar" prefHeight="31.0" prefWidth="113.0" style="-fx-background-color: #DC2216; -fx-border-color: #000000;" text="Eliminar" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_regresar" layoutX="370.0" layoutY="246.0" mnemonicParsing="false" onAction="#doRegresar" prefHeight="31.0" prefWidth="113.0" style="-fx-border-color: #000000;" text="Regresar" textFill="#de2912">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="16.0" layoutY="24.0" prefHeight="31.0" prefWidth="113.0" style="-fx-border-color: #000000;" text="Identificación:">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_id" layoutX="133.0" layoutY="24.0" onKeyTyped="#validaId" prefHeight="31.0" prefWidth="202.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="btn_buscar" layoutX="339.0" layoutY="24.0" mnemonicParsing="false" onAction="#doBuscar" prefHeight="31.0" prefWidth="57.0" style="-fx-border-color: #000000;" text="Buscar" textFill="#048a04">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

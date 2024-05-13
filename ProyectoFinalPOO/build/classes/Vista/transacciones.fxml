@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.TransaccionesController">
+   <children>
+      <Pane fx:id="pane_1" prefHeight="400.0" prefWidth="538.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="581.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagesFijas/cajero.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="96.0" layoutY="75.0" prefHeight="65.0" prefWidth="347.0" text="Por favor ingrese su clave para continuar" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <PasswordField fx:id="psw_clave" layoutX="160.0" layoutY="155.0" onKeyTyped="#validaClave" prefHeight="25.0" prefWidth="218.0" />
+            <Button fx:id="btn_regresar" layoutX="14.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#do_regresar" prefHeight="42.0" prefWidth="61.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label alignment="CENTER" layoutX="82.0" layoutY="244.0" prefHeight="25.0" prefWidth="102.0" text="&lt;- Regresar" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Button fx:id="btn_continuar" layoutX="462.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#do_continuar" prefHeight="42.0" prefWidth="61.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label alignment="CENTER" layoutX="341.0" layoutY="245.0" prefHeight="25.0" prefWidth="102.0" text="Continuar-&gt;" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pane_2" prefHeight="400.0" prefWidth="538.0" visible="false">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="545.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagesFijas/cajero.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbl_nombre" alignment="CENTER" layoutX="96.0" layoutY="31.0" prefHeight="31.0" prefWidth="347.0" textAlignment="CENTER" textFill="#1d00ff">
+               <font>
+                  <Font name="Yu Gothic Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="CENTER" layoutX="96.0" layoutY="312.0" prefHeight="31.0" prefWidth="347.0" text="Por favor seleccione su transacción" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_pagos" layoutX="96.0" layoutY="243.0" prefHeight="25.0" prefWidth="102.0" text="&lt;- Pagos" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_saldos" layoutX="96.0" layoutY="185.0" prefHeight="25.0" prefWidth="102.0" text="&lt;- Saldos" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_avance" layoutX="96.0" layoutY="127.0" prefHeight="25.0" prefWidth="102.0" text="&lt;- Avance" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_retiro" layoutX="96.0" layoutY="69.0" prefHeight="25.0" prefWidth="102.0" text="&lt;- Retiro" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_deposito" alignment="CENTER_RIGHT" layoutX="338.0" layoutY="69.0" prefHeight="25.0" prefWidth="102.0" text="Depósito -&gt;" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_compra" alignment="CENTER_RIGHT" layoutX="338.0" layoutY="127.0" prefHeight="25.0" prefWidth="102.0" text="Compra -&gt;" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_cambioClave" alignment="CENTER_RIGHT" layoutX="326.0" layoutY="185.0" prefHeight="25.0" prefWidth="114.0" text="Cambio clave -&gt;" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_salir" alignment="CENTER_RIGHT" layoutX="338.0" layoutY="243.0" prefHeight="25.0" prefWidth="102.0" text="Salir -&gt;" textAlignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Button fx:id="btn_retiro" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onMouseClicked="#do_retiro" prefHeight="40.0" prefWidth="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn_avance" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#do_avance" prefHeight="40.0" prefWidth="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn_saldos" layoutX="14.0" layoutY="178.0" mnemonicParsing="false" onMouseClicked="#do_saldos" prefHeight="40.0" prefWidth="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn_pagos" layoutX="14.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#do_pagos" prefHeight="40.0" prefWidth="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn_deposito" layoutX="461.0" layoutY="62.0" mnemonicParsing="false" onMouseClicked="#do_deposito" prefHeight="40.0" prefWidth="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn_compra" layoutX="461.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#do_compra" prefHeight="40.0" prefWidth="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn_cambioClave" layoutX="462.0" layoutY="177.0" mnemonicParsing="false" onMouseClicked="#do_cambioClave" prefHeight="40.0" prefWidth="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn_salir" layoutX="461.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#do_regresar" prefHeight="40.0" prefWidth="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ComboBox fx:id="cbx_productos" layoutX="168.0" layoutY="70.0" onAction="#doFiltroProducto" prefHeight="25.0" prefWidth="176.0" promptText="Seleccione el producto">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

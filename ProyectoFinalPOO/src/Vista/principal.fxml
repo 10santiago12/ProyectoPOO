@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="323.0" prefWidth="570.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="Control.PrincipalController">
+   <children>
+      <Pane prefHeight="323.0" prefWidth="574.0" style="-fx-border-color: #3638DE;">
+         <children>
+            <ImageView fx:id="img_portada" fitHeight="326.0" fitWidth="574.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagesFijas/portada.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_clientes" fitHeight="128.0" fitWidth="125.0" layoutX="-1.0" layoutY="-8.0" onMouseClicked="#goClientes" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagesFijas/clientes.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_productos" fitHeight="93.0" fitWidth="93.0" layoutX="15.0" layoutY="115.0" onMouseClicked="#goProductos" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagesFijas/productos.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="txt_clientes" layoutX="109.0" layoutY="22.0" onMouseClicked="#goClientes" prefHeight="65.0" prefWidth="105.0" text="Clientes" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="txt_clientes1" layoutX="109.0" layoutY="131.0" onMouseClicked="#goProductos" prefHeight="65.0" prefWidth="125.0" text="Productos" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="txt_clientes2" layoutX="109.0" layoutY="237.0" onMouseClicked="#goTransacciones" prefHeight="65.0" prefWidth="155.0" text="Transacciones" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="img_transacciones" fitHeight="93.0" fitWidth="93.0" layoutX="15.0" layoutY="223.0" onMouseClicked="#goTransacciones" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagesFijas/transacciones.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
